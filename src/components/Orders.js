@@ -31,7 +31,18 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Orders() {
+const getRooms = async () => {
+    try {
+        return await axios.get('localhost:8080/api/rooms')
+    } catch (error) {
+        console.error(error)
+    }
+}
+
+const axios = require('axios')
+const axreq = getRooms()
+
+export default function Rooms() {
   const classes = useStyles();
   return (
     <React.Fragment>

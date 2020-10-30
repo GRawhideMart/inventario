@@ -1,11 +1,13 @@
 import './App.css';
 import Dashboard from './components/Dashboard';
+import { ThemeProvider } from '@material-ui/styles'
+import { theme } from './shared/theme';
 
 const App = () => {
   return (
-    <div className="App">
+    <ThemeProvider theme={theme}>
       <Dashboard />
-    </div>
+    </ThemeProvider>
   );
 }
 
